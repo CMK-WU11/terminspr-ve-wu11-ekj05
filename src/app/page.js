@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Image className="startpage-background fade-animation" src={background} height={500} width={500} alt="background image" priority/>
       <Image className="startpage-logo fade-animation" src={logo} height={153} width={341} alt="logo image"/>
-      <Link href={"/aktiviteter"} className="startpage-button-container button-appear">
+      <Link href={"/activities"} className="startpage-button-container button-appear">
         <VariableButton text={"Kom i gang"} className="startpage-button"/>
       </Link>
     </>

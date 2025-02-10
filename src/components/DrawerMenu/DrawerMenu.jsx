@@ -7,15 +7,15 @@ export default function DrawerMenu(){
     return (
         <>
             <div className="drawermenu-div">
-                <Link href={"/aktiviteter"}>
+                <Link href={"/activities"}>
                     <FiHome/>
                 </Link>
 
-                <Link href={"/aktivitetsDetaljer"}>
+                <Link href={"/search"}>
                     <FiSearch/>
                 </Link>
 
-                <Link href={"/kalender"}>
+                <Link href={"/calendar"}>
                     <FiCalendar/>
                 </Link>
             </div>

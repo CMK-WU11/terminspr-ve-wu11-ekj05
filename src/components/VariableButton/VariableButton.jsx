@@ -1,9 +1,9 @@
 "use client"
 
-export default function VariableButton({ text, clickFunction, className="" }){
+export default function VariableButton({ text, clickFunction, id="" }){
     return (
         <>
-            <button className={"variable-button " + className} onClick={clickFunction}>
+            <button className={"variable-button "} id={id} onClick={clickFunction}>
                 <p>{text}</p>
             </button>
         </>
