@@ -1,3 +1,7 @@
 export default function Home() {
-  return (null)
+  return (
+    <>
+      <h1><span>LANDRUP</span><span>DANS</span></h1>
+    </>
+  )
 }
