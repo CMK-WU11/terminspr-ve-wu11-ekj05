@@ -1,0 +1,36 @@
+.startpage-background
+    width: 100vw
+    height: 100vh
+    object-fit: cover
+    z-index: -1
+    position: absolute
+
+.startpage-logo
+    position: absolute
+    left: 0
+    bottom: 13em
+
+.startpage-button-container
+    display: flex
+    justify-content: center
+    position: absolute
+    bottom: 2.5em
+    width: 100%
+
+@keyframes startAnim
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes buttonAppearAnim
+    0%
+        bottom: -5em
+    100%
+        bottom: 2.5em
+
+.fade-animation
+    animation: startAnim 1.5s ease-in forwards
+
+.button-appear
+    animation: buttonAppearAnim 3s ease-in forwards

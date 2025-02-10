@@ -1,26 +1,24 @@
-@use "../components/DrawerMenu/_DrawerMenu.sass"
-@use "../components/ActivityCard/_ActivityCard.sass"
-@use "../components/VariableButton/_VariableButton.sass"
-@use "/(main)/aktiviteter/_aktiviteter.sass"
-@use "/(main)/aktivitetsDetaljer/_aktivitetsDetaljer.sass"
-@use "/(main)/kalender/_kalender.sass"
-@use "/(main)/søgeSide/_søgeSide.sass"
-@use "/(main)/_mainLayoutStyle.sass"
-
-// Font variables
-$font-small: 18px
-$font-medium: 24px
-$font-large: 36px
-
-// Color variables
-$base-gray: #EAEAEA
-$base-dark-violet: #5E2E53
-$base-violet: #E1A1E9
-$base-black: #000000
+@use "../utils/variables"
+@use "../components/DrawerMenu/DrawerMenu"
+@use "../components/ActivityCard/ActivityCard"
+@use "../components/VariableButton/VariableButton"
+@use "./(main)/aktiviteter/aktiviteter"
+@use "./(main)/aktivitetsDetaljer/aktivitetsDetaljer"
+@use "./(main)/kalender/kalender"
+@use "./(main)/søgeSide/søgeSide"
+@use "./(main)/mainLayoutStyle"
+@use "./homepageStyle"
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
 
 html, body
   max-width: 100vw
   overflow-x: hidden
+  *
+    font-family: "Ubuntu", serif
+    font-weight: 400
+    font-style: normal
 
 *
   box-sizing: border-box
@@ -28,7 +26,6 @@ html, body
   margin: 0
 
 a
-  color: inherit
   text-decoration: none
 
 .ubuntu-regular
@@ -39,7 +36,7 @@ a
 .roboto-regular
   font-family: "Roboto", serif
   font-optical-sizing: auto
-  font-weight: 100
+  font-weight: 400
   font-style: normal
   font-variation-settings: "wdth" 100
 
