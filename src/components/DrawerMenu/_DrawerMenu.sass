@@ -1,0 +1,25 @@
+@use "../../utils/variables" as *
+
+.drawermenu-div
+    background-color: #fff
+    width: 100%
+    height: 4em
+    position: fixed
+    bottom: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 2em
+    a
+        color: inherit
+    svg
+        height: 1.5em
+        width: 1.5em
+        border: solid black 2px
+        border-radius: 50%
+        padding: 0.5em
+        box-sizing: content-box
+        overflow: visible
+        &:hover
+            color: $base-violet
+            border-color: $base-violet
