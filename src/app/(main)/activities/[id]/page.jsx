@@ -13,6 +13,7 @@ export default async function activitiesDetails({ params }){
     }
     
 
+    
     return (
         <>
             <div className="details-image-container">
