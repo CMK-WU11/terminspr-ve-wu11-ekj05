@@ -1,3 +1,4 @@
+import CalendarCard from "@/components/CalendarCard/CalendarCard"
 import { cookies } from "next/headers"
 
 export default async function calendar(){
@@ -12,13 +13,14 @@ export default async function calendar(){
         }
     })
     const userData = await res.json()
-    console.log(userData)
 
     return (
         <>
             <h1 className="calendar-heading">Kalender</h1>
             <div className="calendar-container">
-
+                {userData.activities.map((activity)=>(
+                    <CalendarCard activityData={activity}/>
+                ))}
             </div>
         </>
     )
