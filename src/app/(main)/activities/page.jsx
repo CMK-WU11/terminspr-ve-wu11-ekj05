@@ -16,7 +16,7 @@ export default async function activites(){
             <h1 className="activites-heading">Aktiviteter</h1>
             <div className="activities-container">
                 {activitiesData.map((activity)=>(
-                    <Link id={activity.id} href={"/activities/"+activity.id}>
+                    <Link key={activity.id} href={"/activities/"+activity.id}>
                         <ActivityCard activityData={activity}/>
                     </Link>
                 ))}

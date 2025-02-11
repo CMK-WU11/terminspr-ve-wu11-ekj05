@@ -1,0 +1,47 @@
+@use "../../utils/variables" as *
+    
+.login-background
+    width: 100vw
+    height: 100vh
+    object-fit: cover
+    position: absolute
+    z-index: -2
+
+.background-decoration
+    background-color: $base-dark-violet
+    opacity: 0.5
+    height: 60%
+    width: 200%
+    position: absolute
+    transform: rotate(-27.19deg)
+    z-index: -1
+
+.login-container
+    position: relative
+    overflow: hidden
+    height: 100vh
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 0 2.5em
+    h1
+        font-size: 48px
+        color: #fff
+        margin-bottom: 0.25em
+        width: 100%
+    form
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        gap: 1em
+        input
+            height: 3em
+            font-size: $font-small
+            padding-left: 1em
+            border: none
+            width: 100%
+        button
+            margin-top: 1em
