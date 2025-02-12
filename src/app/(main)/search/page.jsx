@@ -15,7 +15,6 @@ export default function search(){
         async function fetchActivities(){
             const res = await fetch("http://localhost:4000/api/v1/activities", {method: "GET"})
             const activitiesData = await res.json()
-            console.log(activitiesData)
             setActivities(activitiesData)
         }
         fetchActivities()
@@ -34,8 +33,6 @@ export default function search(){
                 ))
             )
         )
-        console.log("value", value)
-        console.log("filtered activites", filteredActivities)
     }
 
     useEffect(()=>{

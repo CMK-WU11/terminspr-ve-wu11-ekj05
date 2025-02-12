@@ -4,13 +4,12 @@ import Link from "next/link"
 
 export default async function calendar(){
     const cookieStore = await cookies()
-    const userToken = cookieStore.get("userToken")
-    const userId = cookieStore.get("userId")
-
-    const res = await fetch("http://localhost:4000/api/v1/users/" + userId.value, {
+    const userCookieData = JSON.parse(cookieStore.get("userData").value)
+    
+    const res = await fetch("http://localhost:4000/api/v1/users/" + userCookieData.userId, {
         method: "GET",
         headers: {
-            Authorization: "Bearer " + userToken.value
+            Authorization: "Bearer " + userCookieData.userToken
         }
     })
     const userData = await res.json()

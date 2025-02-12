@@ -3,7 +3,7 @@
 import Image from "next/image";
 import background from "../../../public/splash-image.jpg"
 import VariableButton from "@/components/VariableButton/VariableButton";
-import loginAction from "@/actions/Login.js"
+import loginAction from "@/actions/login.js"
 import { useActionState, useEffect } from "react";
 
 export default function login(){

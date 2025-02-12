@@ -53,8 +53,11 @@ export default async function Login(prevState, formData){
         const data = await res.json()
         console.log(data)
         const cookieStore = await cookies()
-        cookieStore.set("userToken", data.token)
-        cookieStore.set("userId", data.userId)
+        cookieStore.set("userData", JSON.stringify({
+            userId: data.userId,
+            userToken: data.token,
+            userRole: data.role
+        }))
     } catch (error) {
         throw new Error(error)
     }
