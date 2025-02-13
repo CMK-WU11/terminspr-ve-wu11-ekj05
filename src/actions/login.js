@@ -7,7 +7,7 @@ import { z } from "zod"
 export default async function Login(prevState, formData){
     const username = formData.get("username")
     const password = formData.get("password")
-
+    const checkbox = formData.get("checkbox")
     const schema = z.object({
         username: z.string().min(1, { message: "Du skal angive et brugernavn" }),
         password: z.string().min(1, { message: "Du skal angive et password" }),
@@ -40,7 +40,7 @@ export default async function Login(prevState, formData){
             }),
         })
         
-        if(res.status === 400){
+        if(res.status === 401){
             return {
                 formData: {
                     username,
@@ -57,7 +57,7 @@ export default async function Login(prevState, formData){
             userId: data.userId,
             userToken: data.token,
             userRole: data.role
-        }))
+        }), { maxAge: checkbox === "on" ? 60 * 60 * 24 : undefined})
     } catch (error) {
         throw new Error(error)
     }

@@ -19,7 +19,7 @@ export default async function calendar(){
             <h1 className="calendar-heading">Kalender</h1>
             <div className="calendar-container">
                 {userData.activities.map((activity)=>(
-                    <Link key={activity.id} href={"/activities/" + activity.id}>
+                    <Link key={activity.id} href={userData.role === "default" ? ("/activities/" + activity.id) : ("/calendar/" + activity.id)}>
                         <CalendarCard activityData={activity}/>
                     </Link>
                 ))}

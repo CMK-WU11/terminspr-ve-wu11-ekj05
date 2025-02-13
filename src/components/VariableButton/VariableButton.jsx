@@ -19,10 +19,8 @@ export default function VariableButton({ text, activityData, userData, clickFunc
         setNewUserData(updatedUserData)
     }
 
-    async function clickHandler(){
-        if((newUserData.age < activityData.minAge || newUserData.age > activityData.maxAge)){
-            setErrorMsg("Ikke indenfor aldersgrænsen")
-        } else if(newUserData.activities.find(activity => activity.id === activityData.id)){
+    async function fetchHandler(){
+        if(newUserData.activities.find(activity => activity.id === activityData.id)){
             const res = await fetch("http://localhost:4000/api/v1/users/" + userData.id + "/activities/" + activityData.id, {
                 method: "DELETE",
                 headers: {
@@ -52,6 +50,18 @@ export default function VariableButton({ text, activityData, userData, clickFunc
             if(res.ok){
                 refreshUserData()
             }
+        }
+    }
+
+    async function clickHandler(){
+        if(newUserData.role === "default"){
+            if(newUserData.age < activityData.minAge || newUserData.age > activityData.maxAge){
+                setErrorMsg("Ikke indenfor aldersgrænsen")
+            } else{
+                fetchHandler()
+            }
+        } else{
+            fetchHandler()
         }
     }
 
